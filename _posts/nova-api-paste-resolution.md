@@ -224,3 +224,7 @@ class CorsMixin(object):
         resp = webob.exc.HTTPAccepted('Options Accept', headers)
         return resp(environ, start_response)
 ```
+
+
+
+</br>
