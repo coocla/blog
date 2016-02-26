@@ -1,7 +1,7 @@
 title: Ansible配置管理play-book
 categories: Ansible
 tags: [ansible,playbook]
-date: 2016-02-26 16:11:07
+date: 2014-09-08 11:31:07
 ---
 ## Play-book
 Ansible是一个完全简单的模型驱动的配置管理、部署和命令执行框架;

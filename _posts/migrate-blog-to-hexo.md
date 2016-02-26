@@ -12,7 +12,7 @@ date: 2016-02-26 16:11:07
 本地---> github ---> vps
 
 本地推送到github后由github的webhook来触发vps的更新部署脚本, 于是首先就想到了ngx_lua, 在nginx配置一个url */hookdeploy* 然后由lua来触发执行更新脚本.
-
+<!--more-->
 由于当前vps上nginx不支持lua所以需要先为当前nginx增加lua模块。
 
 ## 安装依赖包LuaJIT, nginx_lua, ngx_devel_kit
@@ -70,6 +70,7 @@ fi
 location /hookdeploy {
     access_by_lua '
         local f = io.popen("/bin/bash", "/tmp/hookdeploy.sh")
+        ngx.say("I get it")
     '
 }
 ```
