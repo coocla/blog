@@ -96,6 +96,7 @@ new
 ```
 4. 将该img挂载并且格式化为ext4的文件系统
 > 注意这里需要使用一个内核支持rbd模块服务器进行挂载，否则将无法直接挂载
+ 
 ```
 # modprobe rbd
 # lsmod | grep rbd

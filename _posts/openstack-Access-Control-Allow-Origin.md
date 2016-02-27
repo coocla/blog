@@ -12,6 +12,7 @@ OpenStack是目前一个比较火的开源的云计算管理平台项目，它�
 ## 如何支持跨域
 为openstack中各个组件API添加代码，以支持跨域访问。
 > 以下代码均以juno版本为例，省略掉中间的大量代码，请根据类和方法名定位代码添加位置。
+ 
 
 ### KeyStone
 keystone/common/wsgi.py

@@ -46,8 +46,10 @@ App Key, App Secret and the Permission type shown in the confirmation page:
 # Permission type, App folder or Full Dropbox [a/f]: a
 
 > App key is xxxxxxxxxx, App secret is xxxxxxxxxx and Access level is App Folder, it's ok? [y/n]y
+ 
 
 > Token request... OK
+ 
 
 Please open the following URL in your Browser, and allow Dropbox Uploader
 to access your DropBox folder:
@@ -57,6 +59,7 @@ to access your DropBox folder:
 Press enter when done...
 
 > Access Token request... OK
+ 
 
 Setup completed!
 ```

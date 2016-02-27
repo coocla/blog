@@ -110,6 +110,7 @@ server {
 # openssl req -new -key docker.coocla.org.key -out docker.coocla.org.csr
 ```
 > 这里在填写Common Name的时候一定要与nginx的server_name保持一致
+ 
 
 利用之前的CA的证书为域名的证书进行签发
 ```
@@ -135,6 +136,7 @@ server {
 # systemctl reload nginx
 ```
 > 因为nginx的证书是由一个不被信任的CA(咱们自己随便生成的)签发的，因此其他服务器在访问的时候，会被提示证书不可信，请求会中断。因此需要将刚才咱们生成的CA的证书，加入到客户端的CA证书列表中。
+ 
 
 将之前生成的CA证书的内容，追加到客户端的可信任CA证书列表中
 CA证书内容类似：
@@ -173,6 +175,7 @@ MIID3TCCAsWgAwIBAgIJAPDDWEAD3cmpMA0
 # docker commit $(docker ps -ql) hello-ubuntu
 ```
 > 执行上述命令时，请确保当前服务器上有且仅有一个容器，查看当前服务器上的容器列表：docker ps --all
+ 
 
 查看当前镜像列表
 ```

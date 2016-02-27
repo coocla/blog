@@ -16,6 +16,7 @@ HAProxy is a free, very fast and reliable solution offering high availability, l
 # make TARGET=linux26 PREFIX=/usr/local/haproxy install
 ```
 > TARGET后面根据本机操作系统内核版本来填写
+ 
 
 创建配置文件目录，日志目录，并根据需求编写配置文件
 ```
@@ -45,6 +46,7 @@ SYSLOGD_OPTIONS="-r -m 0"
 service syslog restart
 ```
 > -r enables logging from remote machines
+ 
 
 ## haproxy配置详解
 HAProxy配置中分五大部分：

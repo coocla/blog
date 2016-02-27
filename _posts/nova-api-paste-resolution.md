@@ -73,6 +73,7 @@ pipeline = filter1 filter2 filter3 admin[filter:filter1]
 ## 解读nova中api-paste.ini
 */etc/nova/api-paste.ini*的具体内容：
 > 这里着重看下OpenStack的流向
+ 
 
 ```
 ############

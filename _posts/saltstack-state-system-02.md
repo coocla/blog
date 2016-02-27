@@ -19,6 +19,7 @@ Default data - yaml
 典型的sls文件经常看起就像yaml
 
 > 这些daemons使用一些通用的服务和包名称，不同的架构经常使用不同的名称和安装包。例如apache在红帽系统中应该是httpd。salt对于底层服务管理使用init下的脚本，系统命令名，配置文件等，执行service.get_all函数来获取对应服务器上一组可用的服务名称。
+ 
 ```
 apache:
   pkg:
@@ -133,6 +134,7 @@ sshd:
              - pkg: openssh-server
 ```
 > 注意我们使用了两个类似的方法通过salt进行文件的管理，在/etc/ssh/sshd_config state上，我们使用了file.managed进行定义，然而在/etc/ssh/banner state上，我们使用了file状态并且添加了一个managed托管属性，进行state的声明定义。两种方法产生的结果都一样，第一种方式使用file.managed其实只是一个缩写，你可以将其理解为一个快捷方式。
+ 
 
 现在我们的state树状结构看起来像这样：
 ```

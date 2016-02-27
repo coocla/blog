@@ -78,6 +78,7 @@ schedule:
 schedule也可以将minon收集的数据通过returner收集到mysql数据库中.
 
 > 需要注意的是：当你通过pillar首次或者新增加schedule的定义时，记得要将pillar数据同步至对应minion上去。
+ 
 
 ```
 # salt <tgt> saltutil.refresh_pillar

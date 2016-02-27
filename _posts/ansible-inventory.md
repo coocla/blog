@@ -108,6 +108,7 @@ Ansible并不建议将主机的变量都存储在Inventory文件中，这些变�
 /etc/ansible/host_vars/foosball
 ```
 > Tip：在Ansible 1.2或更高版本中，group vars和host
+ 
 
 vars目录可以存在于playbook目录或者Inventory目录，如果两个目录都存在同一主机的相同定义，那么playbook目录将会第二次被加载，也就是说playbook中定义的将会覆盖Inventory中对应的定义
 List of Behavioral Inventory Parameters

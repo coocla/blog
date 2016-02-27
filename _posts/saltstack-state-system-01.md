@@ -19,6 +19,7 @@ file_roots:
     - /srv/salt
 ```
 > 如果你在部署FreeBSD的操作系统，这个 file_roots参数默认值为：/usr/local/etc/salt/states
+ 
 
 重启salt master使这个配置改变生效：
 ```
@@ -50,6 +51,7 @@ apache:                 # ID的声明
 ```
 第一行，是对全局ID的声明，可以是任意的标识符，在这种情况下，使用需要被安装的软件包的包名来定义。
 > 对于apache httpd web服务器的包名取决于操作系统的发行版，例如，在Fedora是httpd，但在Debian/Ubuntu是apache2
+ 
 
 第二行，是对state的声明，定义了我们所要十一on个的salt states，在这个例子中，我们使用pkg state以确保一个给定的包被正确安装。
 第三行，称为函数的声明，这个函数被定义在pkg state这个模块中。

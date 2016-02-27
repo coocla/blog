@@ -37,6 +37,7 @@ patterns意味着在ansible中管理哪些主机，也可以理解为，要与�
 
 上面这个复杂的表达式最后表示的目标主机必须满足：在webservers或者dbservers组中，必须还存在于staging组中，但是不在phoenix组中。这些可以看作是SaltStack中Compound matchers
 > 注意：在shell中，记得把 & ! 这些特殊符号进行转义。
+ 
 
 在ansible-palybook命令中，你也可以使用变量来组成这样的表达式，但是你必须使用“-e”的选项来指定这个表达式。通常我们不这样用：
 ```

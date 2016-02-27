@@ -12,6 +12,7 @@ date: 2013-11-11 14:31:46
 * kwargs是一个包含关键字参数的字典，而其中args如果不传递，kwargs需要传递，则必须在args的位置留空<!--more-->
 
 > apply的返回值就是函数func函数的返回值
+ 
 
 ```
 #coding:utf-8

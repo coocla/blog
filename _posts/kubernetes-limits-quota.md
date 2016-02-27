@@ -11,7 +11,9 @@ kubernetes的调度算法仅仅会将新创建的资源调度到拥有足够CPU�
 当指定一个pod时，可以指定每一个container可以使用多少CPU和RAM，当container拥有资源限制时，调度器可以调度出更加适合该pod运行的节点，并且针对资源的抢占也可以很好的控制。
 
 > 资源的类型分为两个：CPU、memory
+ 
 > CPU的限制的CPU的核数比重，内存的最小单位是字节
+ 
 
 从kubernetes源代码中可以看到关于资源限制的单位如下图：<!--more-->
 ![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_limits/084C3B95-37AB-46D3-84C3-D4FE538FE5F3.jpg)
@@ -28,6 +30,7 @@ memory	Total memory limits of containers
     spec.container[x].resources.limits.memory
 来进行资源的限制
 > 这里的x用来表示列表的索引
+ 
 
 ### 资源限制的生效规则：
 在相同的集群中，如果没有设置对应的值，那么将会使用默认的值。默认的值依赖于所处集群的namespace配置，针对资源限制只能作用在单个容器中，pod的资源限制则是其中container的资源限制总和，如果没有设置对应值则视为0。

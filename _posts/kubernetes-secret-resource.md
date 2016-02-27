@@ -97,6 +97,7 @@ ewoJImF1dGhzIjogewoJCSJkb2NrZXIuY29vY2xhLm9yZyI6IHsKCQkJImF1dGgiOiAiWkdWMk9t
 UnZZMnRsY2c9PSIsCgkJCSJlbWFpbCI6ICIiCgkJfQoJfQp9
 ```
 > 注意：这里我们发现经过base64编码后是两段字符串，但是我们在定义secret时需要将其合并成一行，不允许有回车出现。
+ 
 
 3. 创建对应的secret
 ```

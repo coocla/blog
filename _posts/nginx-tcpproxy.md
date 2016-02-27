@@ -27,6 +27,7 @@ sshd服务是基于tcp协议的，因此需要nginx支持tcp协议代理，谷�
 # patch –p1 < /root/nginx_tcp_proxy_module/tcp.patch
 ```
 > 注：这里有个问题，刚开始我使用的nginx的源码包在进行安装补丁的时候提示如下错误：
+ 
 
 ```
 can't find file to patch at input line 5

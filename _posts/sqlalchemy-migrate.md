@@ -38,6 +38,7 @@ date: 2015-04-05 11:57:38
 +----------+       +----------+    +----------+        +----------+
 ```
 > 以下操作如果不明确说明均是通过migrate.versioning API获取。
+ 
 
 ## 实战
 1. 创建一个repository
@@ -45,6 +46,7 @@ date: 2015-04-05 11:57:38
 3. 按照标准为version 脚本定义upgrade(升级)、downgrade(降级) 方法。
 4. 通过指定版本号调用upgrade/downgrade方法对比当前version，按照相差版本号从小到大依次执行对应的脚本，从而达到对数据结构的升级/降级。
 > 好的习惯是定义好升级对应的降级操作，当然downgrade非必须，可以在downgrade方法中引发一个异常，例如：raise NotImplementedError("Unsupport downgrade.")
+ 
 
 ### 安装
 ```
@@ -119,6 +121,7 @@ if __name__ == '__main__':
     db_version_control(repo_name)
 ```
 > 执行后，将会在数据库fm中创建一张名为migrate_version的表，用来标示当前项目相对的repository所处的版本号。
+ 
 
 ### 获取当前版本
 ```
@@ -263,6 +266,7 @@ if __name__ == '__main__':
 在修改数据结构的同时，也可以修改对应字段的值，或者填补之前的空白字段到达not null，这里需要注意的时在添加unique时注意生产环境数据是否已经有了不唯一，如果不唯一则需要先修改数据然后在添加对应的unique key。
 
 > 参考: http://sqlalchemy-migrate.readthedocs.org/en/latest/versioning.html
+ 
 
 
 
