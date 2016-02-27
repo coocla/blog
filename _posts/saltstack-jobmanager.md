@@ -10,7 +10,7 @@ jobs方法被定义在saltutil模块中，包含以下方法：
 2. find_job 返回指定job id的相关数据
 3. signal_job 允许向指定的job id任务发送一个信号
 4. term_job 向指定的job id发送一个termaination信号(SIGTERM,15)来控制进程
-5. kill_job 向指定的job id发送一个kill信号(SIGKILL,9)
+5. kill_job 向指定的job id发送一个kill信号(SIGKILL,9)<!--more-->
 
 ## jobs runner
 jobs runner包含有很多函数
