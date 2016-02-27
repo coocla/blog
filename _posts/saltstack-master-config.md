@@ -101,7 +101,7 @@ enforce_mine_cache: False
 默认值：/tmp/salt-unix
 指定unix socket主进程通信的socket创建路径
 
-#### master的安全配置
+### master的安全配置
 *open_mode*
 默认值：False
 open_mode是一个危险的安全特性，当master遇到pki认证系统，秘钥混淆和身份验证失效时，打开open_mode，master将会接受所有的身份验证。这将会清理掉pki秘钥接受的minions。通常情况下open_mode不应该被打开，它只适用于短时间内清理pki keys，若要打开它，可将值调整为True
@@ -162,7 +162,7 @@ token_expire: 43200
 ```
 file_recv: False
 ```
-###master模块管理
+### master模块管理
 *runner_dirs*
 默认值：[]
 设置搜索runner模块的额外路径
@@ -175,7 +175,7 @@ runner_dirs: []
 ```
 cython_enable: False
 ```
-###master状态系统设置
+### master状态系统设置
 *state_verbose*
 默认：False
 state_verbose允许从minions返回更多详细的信息，通常清空下只返回失败或者已经更改，但是将state_verbose设置为True,将会返回所有的状态检查
@@ -218,7 +218,7 @@ failhard: False
 ```
 test: False
 ```
-###master文件服务器设置
+### master文件服务器设置
 *fileserver_backend*
 默认值：
 fileserver_backend:
@@ -258,7 +258,7 @@ hash_type: md5
 ```
 file_buffer_size: 1048576
 ```
-###pillar配置
+### pillar配置
 *pillar_roots*
 默认值：
 
@@ -287,7 +287,7 @@ ext_pillar:
 ```
 从这里可以查到pillar的一些额外细节
 
-###syndic server配置
+### syndic server配置
 
 syncdic是salt master用来通过从整体架构中高于自己层级的master或者syndic接收命令传递给minions的中间角色。使用syndic非常简单，如果这个master在整体架构中，他的下级存在syndic server，那么需要将master的配置文件中的"order_master"值设置为True，如果这个master还需要运行一个syndic进程，扮演另外一个角色，那么需要设置主master server的信息(上一级master)
 千万别忘记了，这将意味着它将与其他master共享它的minion的id和pki_dir
@@ -322,7 +322,7 @@ syndic_log_file: salt-syndic.log
 ```
 syndic_pidfile: syndic.pid
 ```
-###Peer Publish设置
+### Peer Publish设置
 salt minions可以向其他minions发送命令，但是仅仅在minion允许的情况下。默认情况下"Peer Publication"是关闭的，当需要开启的时候，需要开启对应的minion和对应的命令，这样可以允许根据个人的minions安全的划分出命令
 
 *peer*
@@ -357,7 +357,7 @@ nodegroups:
     group1: 'L@foo.domain.com,bar.domain.com,baz.domain.com or bl*.domain.com'
 	group2: 'G@os:Debian and foo.domain.com'
 ```
-###Master日志设置
+### Master日志设置
 
 *log_file*
 默认值：/var/log/salt/master
@@ -413,7 +413,7 @@ log_fmt_logfile: '%(asctime)s,%(msecs)03.0f [%(name)-17s][%(levelname)-8s] %(mes
 默认值：{}
 这可以更加具体的控制日志记录级别，更多详情
 
-###Include 配置
+### Include 配置
 
 *default_include*
 默认值：master.d/*.conf
