@@ -31,8 +31,8 @@ spec:
 # kubectl exec -p test-emptydir -it /bin/bash
 root@test-emptydir:/# findmnt -m /mnt
 ```
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v1.jpg)
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v2.jpg)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v1.jpg)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v2.jpg)
 当我们分别使用Medium为空或者为memory时，我们发现container所创建device类型是不一样的，及实现方式也是不一样的。
 
 ### hostPath
@@ -58,7 +58,7 @@ spec:
 # kubectl exec test-hostpath -it /bin/bash
 root@test-hostpath:/# findmnt -m /mnt
 ```
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v3.jpg)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v3.jpg)
 可以看到，/mnt目录所挂载的是我们Node中的/data目录，由于Node中/data所在的文件系统类型是XFS，以及挂载的参数，我们在container中也可以看到具体的详情的。
 
 ### Ceph RBD
@@ -148,7 +148,7 @@ spec:
 # kubectl exec test-rbd -it /bin/bash
 root@test-rbd:/# findmnt /mnt/
 ```
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v4.jpg)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_volume/v4.jpg)
 8. 在/mnt中创建一个文件
 ```
 root@test-rbd:/# echo ’This is RBD’ > /mnt/index

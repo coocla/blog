@@ -33,7 +33,7 @@ a命名空间(namespace)下有个Service:s1  App: a1，b命名空间(namespace)�
 现在App a1中需要使用a1 和 a2，那么只需要写出 a1 和 a2.b即可。反过来a2也是这样。
 
 ## 工作原理
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/skydns.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/skydns.png)
 kube2sky在启动的时候需要指定集群的域名，需要指定etcd的API接口，需要指定kube-apiserver的接口地址，启动之后kube2sky会通过apiserver监听所有service的创建、删除、修改等操作，在etcd中写入对应的域名解析记录。另一方面kubernetes集群中，kubelet需要配置skydns的解析地址，在kubelet创建的每一个container时，都会将dns指向到skydns，在container中进行解析时，解析请求会发送到skydns，skydns会通过etcd中的解析记录进行查找返回对应的解析结果。
 ## 安装与配置：
 ### 概况
@@ -162,14 +162,14 @@ pods/client-coocla
 services/web
 ```
 在service创建的过程，我看可以看到kube2sky的日志如下：
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/C5522CD8-3BC4-422C-8B32-361431FD951F.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/C5522CD8-3BC4-422C-8B32-361431FD951F.png)
 接下才我们首先验证Service对应的A记录是否正常：
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/14A263E1-B284-43CE-BA2B-B76FFC2160F0.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/14A263E1-B284-43CE-BA2B-B76FFC2160F0.png)
 从上图可以看出跨namespace时则至少需要加上service所在的namespace。
 我们再来验证SRV记录的解析：
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/52C7DE3B-8E05-4799-BB99-E413E8A0ADC5.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/52C7DE3B-8E05-4799-BB99-E413E8A0ADC5.png)
 最后验证集群外部的域名解析：
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/8958A379-638F-43EC-AC79-23A2C3D1A6BA.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes_skydns/8958A379-638F-43EC-AC79-23A2C3D1A6BA.png)
 至此可以看出skydns + kube2sky已经正常的工作在kubernetes集群中。
 
 

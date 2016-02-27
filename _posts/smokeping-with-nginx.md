@@ -217,4 +217,4 @@ include fcgi_params;
 ```
 
 访问，http://IP/smokeping.fcgi 即可访问到如下信息
-[](http://7xk38j.com1.z0.glb.clouddn.com/smokeping/smokeping2.png) 
+![](http://7xk38j.com1.z0.glb.clouddn.com/smokeping/smokeping2.png) 

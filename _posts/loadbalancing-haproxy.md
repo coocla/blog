@@ -8,7 +8,7 @@ HAProxy is a free, very fast and reliable solution offering high availability, l
 摘自：http://haproxy.1wt.eu
 
 ## haproxy集群工作流程<!--more-->
-[](http://7xk38j.com1.z0.glb.clouddn.com/haproxy/172517892.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/haproxy/172517892.png)
 
 ## haproxy安装
 ```
@@ -206,4 +206,4 @@ haproxy 将WEB服务端发送给客户端的cookie中插入(或添加加前缀)h
 haproxy 将后端服务器产生的session和后端服务器标识存在haproxy中的一张表里。客户端请求时先查询这张表。然后根据session分配后端server。
 配置指令：appsession <cookie> len <length> timeout <holdtime>
 ## 统计页面效果图
-[](http://7xk38j.com1.z0.glb.clouddn.com/haproxy/173707446.jpg)
+![](http://7xk38j.com1.z0.glb.clouddn.com/haproxy/173707446.jpg)

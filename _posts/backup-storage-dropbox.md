@@ -60,9 +60,9 @@ Press enter when done...
 
 Setup completed!
 ```
-[](http://7xk38j.com1.z0.glb.clouddn.com/dropbox/1.png)
-[](http://7xk38j.com1.z0.glb.clouddn.com/dropbox/2.png)
-[](http://7xk38j.com1.z0.glb.clouddn.com/dropbox/3.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/dropbox/1.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/dropbox/2.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/dropbox/3.png)
 到此为止，关于Dropbox的设置就结束了，接下来按照自己的情况编写备份同步脚本。
 
 ### 编写备份脚本

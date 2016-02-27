@@ -94,7 +94,7 @@ spec:
 # kubectl get event
 ```
 通过event我们可以发现对应的container由于probe监测失败一直处于循环重启中，其事件原因：unhealthy
-[](http://7xk38j.com1.z0.glb.clouddn.com/liveness_probes1C154BAA-20AA-4F30-985D-0A4913A483BA.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/liveness_probes1C154BAA-20AA-4F30-985D-0A4913A483BA.png)
 
 
 

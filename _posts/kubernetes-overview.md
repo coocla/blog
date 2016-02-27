@@ -65,7 +65,7 @@ kube-proxy运行在每个节点上，它负责整个网络规则的连接与转�
 kubelet运行在每个节点上，作为整个系统的agent，监视着分配到该节点的Pods任务，(通过apiserver或者本地配置文件)，负责挂载Pods所依赖的卷组，下载Pods的秘钥，运行Pods中的容器(通过docker)，周期获取所有容器的可用状态，通过导出Pod和节点的状态反馈给REST系统
 
 大概可以用以下这幅图来表示：
-[](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes/kubernetes.png)
+![](http://7xk38j.com1.z0.glb.clouddn.com/kubernetes/kubernetes.png)
 
 
 一组共享上下文的应用程序叫做一个pod，在上下文中，程序也可以应用单独的cgroup隔离。一个pod的模型就是一组运行指定应用的容器环境(逻辑主机)，他可以容纳一个或多个应用程序，但是在一个容器世界里，这表现的相对较耦合。它们会运行在相同的物理主机或虚拟主机上

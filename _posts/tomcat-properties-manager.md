@@ -62,7 +62,7 @@ Tomcat不是一个完整意义上的Jave EE（j2ee）服务器，因为它没有
 ```
 ## 了解tomcat的主配置文件(server.xml)结构及含义
 如下图所示，前端请求被tomcat直接接收或者由前端的代理，通过HTTP，或者AJP代理给Tomcat，此时请求被tomcat中的connector接收，不同的connector和Engine被service组件关联起来，在一个Engine中定义了许多的虚拟主机，由Host容器定义，每一个Host容器代表一个主机，在各自的Host中，又可以定义多个Context，用此来定义一个虚拟主机中的多个独立的应用程序。
-[](http://7xk38j.com1.z0.glb.clouddn.com/tomcat/170420310.jpg)
+![](http://7xk38j.com1.z0.glb.clouddn.com/tomcat/170420310.jpg)
 ## 单实例应用程序配置一例
 规划：
 网站网页目录：/web/www      域名：www.test1.com
