@@ -12,9 +12,11 @@ Let's Encrypt旨在为每个站点提供免费的基于SSL证书，以加速HTTP
 * 透明：所有证书的签发与撤销记录均对需要调查的人员开放
 * 开放：自动化执行的发放与更新将遵循开放标准，并且允许自定义插件
 * 合作：对整个互联网都有益的社区行动, 不由任何一个组织控制<!--more-->
+
 ## 实践
 ### 准备
 * 操作系统：CentOS6.6
+
 ### 安装
 ```
 git clone https://github.com/letsencrypt/letsencrypt
@@ -22,17 +24,17 @@ cd letsencrypt
 ./letsencrypt-auto run --debug
 ```
 安装过程中可能会安装较多依赖的第三方库,这对于线上环境无疑是不够友好和安全的，我们可以选择使用docker。
-<pre>
+```
 docker run -it --rm -p 443:443 -p 80:80 --name letsencrypt \
            -v "/etc/letsencrypt:/etc/letsencrypt" \
            -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \ 
            quay.io/letsencrypt/letsencrypt:latest auth
-</pre>
+```
 我们利用官方已经制作好的letencrypt镜像
 ### 快速上手
 为域名**coocla.org**生成一个证书
 ```
-letsencrypt -d test8090123.com certonly
+letsencrypt -d coocla.org certonly
 ```
 如果一切顺利, 查看/etc/letsencrypt将会看到如下结构:
 
