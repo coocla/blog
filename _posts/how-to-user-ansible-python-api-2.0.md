@@ -6,7 +6,7 @@ date: 2016-06-30 15:16:23
 ## 概览
 Ansible 和 SaltStack 都提供了 Python 直接调用的API, 这方便了 Pythoner 对这些软件进行二次开发和整合, 此功能着实方便了不少, 比起 Python 代码中调用 shell 也略显专业!
 
-然而 Ansible 在2.0版本后重构了大部分的代码逻辑, 启用了2.0版本之前的 Runner 和 Playbook 类, 使得广大同学之前的代码运行错误. 择日不如撞日, 今天中午对照(官方的文档)[http://docs.ansible.com/ansible/developing_api.html#python-api-2-0], 结合源代码, 对2.0版本之后的 Python API 做了下探究
+然而 Ansible 在2.0版本后重构了大部分的代码逻辑, 启用了2.0版本之前的 Runner 和 Playbook 类, 使得广大同学之前的代码运行错误. 择日不如撞日, 今天中午对照[官方的文档](http://docs.ansible.com/ansible/developing_api.html#python-api-2-0), 结合源代码, 对2.0版本之后的 Python API 做了下探究<!--more-->
 
 ## Adhoc
 adhoc 其实就是执行 Ansible 模块, 通过 adhoc 我们可以方便快捷的完成一些临时的运维操作.
