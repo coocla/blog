@@ -1,6 +1,6 @@
-title: 如何使用Ansible 2-0 Python API
+title: 如何使用Ansible 2.0 Python API
 categories: Python
-tags: [ansible, python api, ansible 2.0]
+tags: [ansible, python api 2.0, ansible 2.0]
 date: 2016-06-30 15:16:23
 ---
 ## 概览
